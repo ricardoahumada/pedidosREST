@@ -21,8 +21,8 @@ import org.jose4j.jwt.consumer.JwtConsumer;
 import org.jose4j.jwt.consumer.JwtConsumerBuilder;
 import org.jose4j.lang.JoseException;
 
-import com.netmind.DAO.DAOFactory;
-import com.netmind.DAO.UsuarioDAO;
+import com.banana.DAO.DAOFactory;
+import com.banana.DAO.UsuarioDAO;
 import com.ricardo.models.StatusMessage;
 import com.ricardo.models.Usuario;
 
@@ -64,7 +64,7 @@ public class JSONService {
 
 			// Validate Token's authenticity and check claims
 			JwtConsumer jwtConsumer = new JwtConsumerBuilder().setRequireExpirationTime()
-					.setAllowedClockSkewInSeconds(30).setRequireSubject().setExpectedIssuer("netmind.com")
+					.setAllowedClockSkewInSeconds(30).setRequireSubject().setExpectedIssuer("banana.com")
 					.setVerificationKey(jwk.getKey()).build();
 
 			// Validate the JWT and process it to the Claims

@@ -20,8 +20,8 @@ import org.jose4j.jws.JsonWebSignature;
 import org.jose4j.jwt.JwtClaims;
 import org.jose4j.lang.JoseException;
 
-import com.netmind.DAO.DAOFactory;
-import com.netmind.DAO.UsuarioDAO;
+import com.banana.DAO.DAOFactory;
+import com.banana.DAO.UsuarioDAO;
 import com.ricardo.models.StatusMessage;
 import com.ricardo.models.Usuario;
 
@@ -76,7 +76,7 @@ public class AuthService extends JSONService{
 
 		// Create the Claims, which will be the content of the JWT
 		JwtClaims claims = new JwtClaims();
-		claims.setIssuer("netmind.com"); // who creates the token and signs it
+		claims.setIssuer("banana.com"); // who creates the token and signs it
 		claims.setExpirationTimeMinutesInTheFuture(10); // token will expire (10
 														// minutes from now)
 		claims.setGeneratedJwtId(); // a unique identifier for the token
